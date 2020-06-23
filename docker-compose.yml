@@ -1,0 +1,14 @@
+version: '3.8'
+services: 
+  psql:
+    image: postgres:latest   
+    environment: 
+      POSTGRES_DB: 'golf'
+      POSTGRES_PASSWORD: 'example'
+  app-01:
+    build:
+      context: .
+    depends_on: 
+      - psql
+    ports:
+      - 8000:8000
