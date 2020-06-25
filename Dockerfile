@@ -18,6 +18,8 @@ COPY golfscores/ ./golfscores/
 
 # Run the database migrations
 # Creates postgres schema specified in Models.py
-CMD python manage.py migrate
+RUN python manage.py makemigrations && \
+    python manage.py migrate && \ 
+    python manage.py test
 
-CMD python manage.py runserver
+ENTRYPOINT ["python", "manage.py", "runserver"]

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Django Scorecard</title>
+</head>
+
+<body>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- Main view -->
+  <div id="root" class="container-fluid">
+    <!-- NavMenu -->
+    <div id="navmenu" class="container">
+      <nav class="navbar navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">ScoreCard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Add Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Add Rounds</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Games table -->
+    <div id="my-games" class="container">
+      {% if all_games %}
+      <p>My games</p>
+      <table id="games-table">
+        <thead>
+          <th scope="col">Game Number</th>
+          <th scope="col">Play Date</th>
+          <th scope="col">Course Name</th>
+          <th scope="col">Stroke Total</th>
+          <th scope="col">Score</th>
+        </thead>
+        <tbody>
+          {% for i in all_games %}
+          <tr>
+            <td>i.`</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p>Add a golf game!</p>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>

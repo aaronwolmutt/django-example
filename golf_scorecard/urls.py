@@ -19,6 +19,6 @@ from django.urls import path
 from golfscores import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls) 
-    #path('/', views)
+    path('admin/', admin.site.urls),
+    path('', views.index)
 ]
